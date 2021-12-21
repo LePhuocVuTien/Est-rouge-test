@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0493BBA527719877006075E0 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493BBA327719877006075E0 /* UIImage+Extension.swift */; };
+		0493BBA627719877006075E0 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493BBA427719877006075E0 /* TriangleView.swift */; };
+		0493BBCD2771A05F006075E0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493BBCC2771A05F006075E0 /* Constant.swift */; };
 		04E4F85B2770A01D009F6132 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4F85A2770A01D009F6132 /* AppDelegate.swift */; };
 		04E4F85F2770A01D009F6132 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4F85E2770A01D009F6132 /* ViewController.swift */; };
 		04E4F8622770A01D009F6132 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E4F8602770A01D009F6132 /* Main.storyboard */; };
@@ -14,7 +17,6 @@
 		04E4F8672770A020009F6132 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E4F8652770A020009F6132 /* LaunchScreen.storyboard */; };
 		04E4F8722770A021009F6132 /* TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4F8712770A021009F6132 /* TestTests.swift */; };
 		04E4F87D2770A021009F6132 /* TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4F87C2770A021009F6132 /* TestUITests.swift */; };
-		04E4F8942770A174009F6132 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4F8932770A174009F6132 /* TriangleView.swift */; };
 		04E4F8A32770A26E009F6132 /* ViewController+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4F8A22770A26E009F6132 /* ViewController+Content.swift */; };
 		04E4F8AB2770A512009F6132 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E4F8AA2770A512009F6132 /* Color.xcassets */; };
 		805BC07FAD86E6B71831740D /* Pods_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8440AB6A0DE1179916A6BD63 /* Pods_TestTests.framework */; };
@@ -41,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		0370709B117CF9458563B8AD /* Pods_Test_TestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_TestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0493BBA327719877006075E0 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		0493BBA427719877006075E0 /* TriangleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
+		0493BBCC2771A05F006075E0 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		04E4F8572770A01D009F6132 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E4F85A2770A01D009F6132 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E4F85E2770A01D009F6132 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +59,6 @@
 		04E4F8782770A021009F6132 /* TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E4F87C2770A021009F6132 /* TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUITests.swift; sourceTree = "<group>"; };
 		04E4F87E2770A021009F6132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04E4F8932770A174009F6132 /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
 		04E4F8A22770A26E009F6132 /* ViewController+Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Content.swift"; sourceTree = "<group>"; };
 		04E4F8AA2770A512009F6132 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		1992CCA2FA4C0BE3B0F80E9A /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,15 +124,17 @@
 		04E4F8592770A01D009F6132 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				04E4F8932770A174009F6132 /* TriangleView.swift */,
+				0493BBCC2771A05F006075E0 /* Constant.swift */,
+				0493BBA427719877006075E0 /* TriangleView.swift */,
+				0493BBA327719877006075E0 /* UIImage+Extension.swift */,
 				04E4F85E2770A01D009F6132 /* ViewController.swift */,
 				04E4F8A22770A26E009F6132 /* ViewController+Content.swift */,
-				04E4F8602770A01D009F6132 /* Main.storyboard */,
-				04E4F8632770A020009F6132 /* Assets.xcassets */,
-				04E4F8652770A020009F6132 /* LaunchScreen.storyboard */,
 				04E4F85A2770A01D009F6132 /* AppDelegate.swift */,
 				04E4F8682770A020009F6132 /* Info.plist */,
+				04E4F8632770A020009F6132 /* Assets.xcassets */,
 				04E4F8AA2770A512009F6132 /* Color.xcassets */,
+				04E4F8602770A01D009F6132 /* Main.storyboard */,
+				04E4F8652770A020009F6132 /* LaunchScreen.storyboard */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -414,8 +420,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E4F8A32770A26E009F6132 /* ViewController+Content.swift in Sources */,
-				04E4F8942770A174009F6132 /* TriangleView.swift in Sources */,
 				04E4F85F2770A01D009F6132 /* ViewController.swift in Sources */,
+				0493BBA527719877006075E0 /* UIImage+Extension.swift in Sources */,
+				0493BBA627719877006075E0 /* TriangleView.swift in Sources */,
+				0493BBCD2771A05F006075E0 /* Constant.swift in Sources */,
 				04E4F85B2770A01D009F6132 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,7 +530,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -577,7 +585,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -594,7 +602,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LTXZVDR289;
+				DEVELOPMENT_TEAM = C9QT66NNBA;
 				INFOPLIST_FILE = Test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -615,7 +623,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LTXZVDR289;
+				DEVELOPMENT_TEAM = C9QT66NNBA;
 				INFOPLIST_FILE = Test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

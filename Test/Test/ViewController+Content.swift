@@ -8,41 +8,33 @@ extension ViewController {
     lazy var icon: UIImageView = {
       let view = UIImageView()
       view.image = UIImage(named: "swift_logo")
+      view.contentMode = .scaleAspectFit
       return view
     }()
     
-    lazy var red: UIView = {
-      let view = UIView(frame: .zero)
+    lazy var red: TriangleView = {
+      let view = TriangleView(frame:.zero)
+      view.fillColor = UIColor(named: "red")
+      view.backgroundColor = .clear
       return view
     }()
     
-    lazy var blue: UIView = {
-      let view = UIView(frame: .zero)
+    lazy var blue: TriangleView = {
+      let view = TriangleView()
+      view.fillColor = UIColor(named: "blue")
+      view.backgroundColor = .clear
       return view
     }()
     
     override init(frame: CGRect) {
       super.init(frame: frame)
+      backgroundColor = .white
       setupViews()
       setConstraint()
-      setProperties()
     }
     
     required init?(coder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func setProperties() {
-//      red.setFillColor(fillColor: UIColor(named: "red")?.cgColor)
-//      blue.setFillColor(fillColor: UIColor(named: "blue")?.cgColor)
-//
-      guard let redColor = UIColor(named: "red")?.cgColor,
-            let blueColor = UIColor(named: "blue")?.cgColor else {
-        return
-      }
-      
-//      makeTriangle(view: red, color: redColor)
-//      makeTriangle(view: blue, color: blueColor)
     }
     
     private func setupViews() {
@@ -53,22 +45,22 @@ extension ViewController {
     
     private func setConstraint() {
       red.snp.makeConstraints {
-        $0.top.equalTo(safeAreaLayoutGuide.snp.top).inset(90)
-        $0.left.equalToSuperview().inset(50.0)
+        $0.top.equalToSuperview().inset(100.0)
+        $0.right.equalTo(snp.centerX).offset(0.0)
         $0.width.equalTo(120.0)
-        $0.height.equalTo(108.0)
+        $0.height.equalTo(120.0)
       }
       
       blue.snp.makeConstraints {
-        $0.top.equalTo(safeAreaLayoutGuide.snp.top).inset(135.0)
-        $0.right.equalToSuperview().inset(50.0)
+        $0.top.equalToSuperview().inset(145.0)
+        $0.left.equalTo(snp.centerX).offset(0.0)
         $0.width.equalTo(120.0)
-        $0.height.equalTo(108.0)
+        $0.height.equalTo(120.0)
       }
       
       icon.snp.makeConstraints {
-        $0.top.equalTo(safeAreaLayoutGuide.snp.top).inset(40.0)
-        $0.right.equalToSuperview().inset(90.0)
+        $0.top.equalToSuperview().inset(40.0)
+        $0.centerX.equalToSuperview().offset(0.0)
         $0.size.equalTo(140.0)
       }
     }

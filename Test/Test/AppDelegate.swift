@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Test
-//
-//  Created by iMacbook on 12/20/21.
-//
-
 import UIKit
 
 @main

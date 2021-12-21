@@ -1,8 +1,14 @@
+import Foundation
 import UIKit
 
-class TriangleView: UIView {
+class TriangleView : UIView {
   
-  private var context = UIGraphicsGetCurrentContext()
+  private var _color: UIColor! = .white
+  
+  var fillColor: UIColor? {
+    get { return _color }
+    set{ _color = newValue }
+  }
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -13,23 +19,21 @@ class TriangleView: UIView {
   }
   
   override func draw(_ rect: CGRect) {
-    guard let context = UIGraphicsGetCurrentContext() else { return }
-    self.context = context
-    
-    self.context?.beginPath()
-    self.context?.move(to: CGPoint(x: rect.minX, y: rect.maxY))
-    self.context?.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-    self.context?.addLine(to: CGPoint(x: (rect.maxX / 2.0), y: rect.minY))
-    self.context?.closePath()
-    
-    self.context?.setFillColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
-    self.context?.fillPath()
-  }
-  
-  open func setFillColor(fillColor: CGColor?) {
-    guard let color = fillColor else {
+    guard let context = UIGraphicsGetCurrentContext() else {
       return
     }
-    self.context?.setFillColor(color)
+    context.beginPath()
+    context.move(to: CGPoint(x: rect.minX, y: rect.maxY))
+    context.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+    context.addLine(to: CGPoint(x: (rect.maxX / 2.0), y: rect.minY))
+    context.closePath()
+    context.setFillColor(_color.cgColor)
+    context.fillPath()
+    
+    let image = UIImage(cgImage: context.makeImage()!)
+    UIGraphicsEndImageContext();
+    let imageCI = image.gaussianBlur(radius: App.radius)
+    context.clear(rect)
+    imageCI.draw(in: rect)
   }
 }
